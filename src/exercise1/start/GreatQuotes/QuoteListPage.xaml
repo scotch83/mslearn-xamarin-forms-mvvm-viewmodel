@@ -5,7 +5,8 @@
     xmlns:me="clr-namespace:GreatQuotes;assembly=GreatQuotes"
     x:Class="GreatQuotes.QuoteListPage" Title="Quotes">
 
-    <ListView ItemsSource="{Binding Quotes}" ItemTapped="OnQuoteSelected">
+    <ListView ItemsSource="{Binding Quotes}" ItemTapped="OnQuoteSelected"
+              SelectedItem="{Binding SelectedQuote, Mode=TwoWay}">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding QuoteText}"

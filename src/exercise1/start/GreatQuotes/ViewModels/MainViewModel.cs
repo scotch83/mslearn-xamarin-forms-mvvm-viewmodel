@@ -8,6 +8,15 @@ namespace GreatQuotes.ViewModels
 {
     public class MainViewModel : SimpleViewModel
     {
+
+        private QuoteViewModel _selectedQuote;
+
+        public QuoteViewModel SelectedQuote
+        {
+            get => _selectedQuote;
+            set => SetPropertyValue(ref _selectedQuote, value);
+        }
+
         public IList<QuoteViewModel> Quotes { get; private set; }
 
         public MainViewModel()
